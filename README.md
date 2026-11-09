@@ -1,6 +1,6 @@
 # ILD Reconstruction Performance: ILC vs FCC-ee v02
 
-This repository contains a Jupyter Notebook comparing the reconstruction performance of the **International Large Detector (ILD)** in the **ILC** and **FCC-ee v02** detector configurations.
+This repository contains comparing of the reconstruction performance of the **International Large Detector (ILD)** in the **ILC** and **FCC-ee v02** detector configurations.
 
 The study uses simulated \(e^+e^- \to ZH\) events with \(Z \to \mu^+\mu^-\) and investigates the invisible Higgs final state \(H \to ZZ^* \to 4\nu\). The same set of **25,250 generated events** is reconstructed with both detector configurations to compare the two-muon selection, additional particle-flow activity, and the reconstructed Z and Higgs recoil-mass distributions.
 
@@ -19,8 +19,6 @@ All input files are stored in [`data/`](data/):
 | `zh_25250_truth_angles.csv` | Generator-level muon polar angles for all 25,250 events. |
 | `zh_25250_truth_4nu.csv` | Truth information identifying the 1,002 \(H \to ZZ^* \to 4\nu\) events. |
 
-The `.root` files are tracked using **Git LFS**.
-
 ## Selection
 
 The analysis applies these cuts sequentially:
@@ -31,8 +29,6 @@ The analysis applies these cuts sequentially:
 4. At most two additional neutral PFOs.
 5. Total additional PFO energy below 20 GeV.
 
-A missing transverse-momentum cut is studied separately but **not included** in the final selection.
-
 ## Final selection results
 
 | Quantity | ILD@ILC | ILD@FCC-ee v02 |
@@ -41,8 +37,6 @@ A missing transverse-momentum cut is studied separately but **not included** in 
 | Selected truth \(4\nu\) events | 663 | 655 |
 | Truth \(4\nu\) efficiency (out of 1,002) | 66.17% | 65.37% |
 | Truth \(4\nu\) purity in the selected sample | 100.00% | 99.85% |
-
-**Scope:** The purity values refer only to the studied generated \(H \to ZZ^*\) sample; they are not estimates of purity against all Standard Model backgrounds. The angular criterion uses generator-level information and is employed for the detector-performance comparison rather than as a directly observable experimental selection.
 
 ## Running the notebook
 
